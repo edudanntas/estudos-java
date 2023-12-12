@@ -1,4 +1,4 @@
-package edu.eduardo.primeirasemana;
+package edu.eduardo.primeirasemana.sintaxes;
 
 import java.util.Scanner;
 

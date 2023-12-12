@@ -1,4 +1,4 @@
-package edu.eduardo.primeirasemana;
+package edu.eduardo.primeirasemana.sintaxes;
 
 public class TiposVariaveis {
     public static void main(String[] args) {
