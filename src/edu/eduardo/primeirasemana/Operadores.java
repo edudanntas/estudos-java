@@ -41,6 +41,11 @@ public class Operadores {
         b = 6;
         String resultado = a == b ? "Verdadeiro" : "Falso";
 
-        System.out.println(resultado);
+//        System.out.println(resultado);
+
+        String nomeUm = "Eduardo";
+        String nomeDois = "Eduardo";
+
+        System.out.println(nomeUm.equals(nomeDois));
     }
 }
