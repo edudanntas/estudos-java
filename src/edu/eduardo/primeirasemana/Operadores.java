@@ -4,7 +4,7 @@ public class Operadores {
     public static void main(String[] args) {
         // Aritméticos:
 
-        double soma = 10.5 + 15.7;
+        /*double soma = 10.5 + 15.7;
         int subtração = 113 - 25;
         int multiplicacao = 20 * 7;
         int divisao = 15 / 3;
@@ -27,6 +27,13 @@ public class Operadores {
         System.out.println(concatenacao);
 
         concatenacao = "1"+(1+1+1);
-        System.out.println(concatenacao);
+        System.out.println(concatenacao);*/
+
+        int numero = 5;
+        System.out.println(numero);
+        numero = - numero;
+        System.out.println(numero);
+        numero = numero * -1;
+        System.out.println(numero);
     }
 }
