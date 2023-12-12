@@ -29,11 +29,18 @@ public class Operadores {
         concatenacao = "1"+(1+1+1);
         System.out.println(concatenacao);*/
 
-        int numero = 5;
+        /*int numero = 5;
         System.out.println(numero);
         numero = - numero;
         System.out.println(numero);
         numero = numero * -1;
-        System.out.println(numero);
+        System.out.println(numero);*/
+
+        int a,b;
+        a = 5;
+        b = 6;
+        String resultado = a == b ? "Verdadeiro" : "Falso";
+
+        System.out.println(resultado);
     }
 }
