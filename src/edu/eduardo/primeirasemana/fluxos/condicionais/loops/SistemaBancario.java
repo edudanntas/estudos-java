@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SistemaBancario {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        double saldo = 0;
+        float saldo = 0.00F;
         while (true) {
             int opcao;
             System.out.println("Selecione uma opção:");
@@ -19,7 +19,7 @@ public class SistemaBancario {
                 case 1:
                     System.out.println(" ");
                     System.out.println("Digite um valor para depositar: ");
-                    double valorDeposito = scan.nextDouble();
+                    double valorDeposito = scan.nextFloat();
                     if (valorDeposito > 0) {
                         saldo += valorDeposito;
                         System.out.println("Valor de: " + valorDeposito + " foi depositado com sucesso");
@@ -32,7 +32,7 @@ public class SistemaBancario {
                 case 2:
                     System.out.println(" ");
                     System.out.println("Digite um valor para Sacar: ");
-                    double valorSaque = scan.nextDouble();
+                    double valorSaque = scan.nextFloat();
                     if (valorSaque > 0 && valorSaque < saldo) {
                         saldo -= valorSaque;
                         System.out.println("Valor de: " + valorSaque + " foi sacado com sucesso");
