@@ -1,5 +1,6 @@
 package edu.eduardo.primeirasemana.fluxos.condicionais.loops;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SistemaBancario2 {
@@ -7,13 +8,16 @@ public class SistemaBancario2 {
         Scanner scan = new Scanner(System.in);
 
         double saldo = 0;
+        Cliente[] clientes = new Cliente[20];
+        int proximaPosicaoDisponivel = 0;
 
         while (true){
             System.out.println("Escolha uma opção para continuar: ");
             System.out.println("1: Depositar");
             System.out.println("2: Sacar");
             System.out.println("3: Ver Saldo");
-            System.out.println("4: Sair");
+            System.out.println("4: Criar cliente");
+            System.out.println("5: Sair");
             int opcao = scan.nextInt();
 
             switch (opcao){
@@ -31,6 +35,10 @@ public class SistemaBancario2 {
                     System.out.println("O seu saldo é de: R$"+saldo+"\n");
                     break;
                 case 4:
+                    Cliente novoCliente = criarCliente();
+                    adicionarClienteAoArray(clientes, novoCliente, proximaPosicaoDisponivel);
+                    System.out.println("Cliente adicionado com sucesso");
+                case 5:
                     return;
                 default:
                     System.out.println("Opção Inválida");
@@ -63,4 +71,44 @@ public class SistemaBancario2 {
 
         return saldo;
     }
+
+    public static Cliente criarCliente() {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Digite o nome do cliente:");
+        String nome = teclado.next();
+
+        System.out.println("Digite o CPF do cliente:");
+        String cpf = teclado.next();
+
+        byte idade = 0;
+        boolean idadeValida = false;
+        while (!idadeValida) {
+            try {
+                System.out.println("Digite a idade do cliente:");
+                idade = teclado.nextByte();
+                idadeValida = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Idade inválida. Por favor, insira um número válido.");
+                teclado.nextLine(); // Limpe o buffer do scanner
+            }
+        }
+
+        Cliente novoCliente = new Cliente(nome, cpf, idade);
+
+        return novoCliente;
+    }
+
+    public static void adicionarClienteAoArray(Cliente[] clientes, Cliente novoCliente, int proximaPosicaoDisponivel) {
+        if (proximaPosicaoDisponivel < clientes.length) {
+            clientes[proximaPosicaoDisponivel] = novoCliente; // 'novoCliente' é a instância que você criou
+            proximaPosicaoDisponivel++;
+            System.out.println("Cliente adicionado com sucesso!");
+        } else {
+            System.out.println("O array de clientes está cheio!");
+        }
+
+    }
+
+
 }
