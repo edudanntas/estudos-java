@@ -29,8 +29,8 @@ public class Vetor {
         }
     }*/
 
-    public boolean adiciona(double elemento){
-        if (this.tamanho < this.elementos.length){
+    public boolean adiciona(double elemento) {
+        if (this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
             this.tamanho++;
             return true;
@@ -38,14 +38,23 @@ public class Vetor {
         return false;
     }
 
-    public double busca(int posicao){
-        if (!(posicao >=0 && posicao<tamanho)){
+    public double busca(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posicão inválida");
         }
         return this.elementos[posicao];
     }
 
-    public int tamanho(){
+    public boolean busca(double elemento) {
+        for (int i = 0; i < this.tamanho; i++) {
+            if (this.elementos[i] == elemento) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int tamanho() {
         return this.tamanho;
     }
 
@@ -56,13 +65,13 @@ public class Vetor {
 
         s.append("[");
 
-        for(int i =0; i<this.tamanho - 1; i++){
+        for (int i = 0; i < this.tamanho - 1; i++) {
             s.append(this.elementos[i]);
             s.append(", ");
         }
 
-        if(this.tamanho>0){
-            s.append(this.elementos[this.tamanho-1]);
+        if (this.tamanho > 0) {
+            s.append(this.elementos[this.tamanho - 1]);
         }
 
         s.append("]");
