@@ -23,5 +23,8 @@ public class TesteQueue {
 
         System.out.println(queueCarros.poll());
         System.out.println(queueCarros);
+
+        System.out.println(queueCarros.isEmpty());
+        System.out.println(queueCarros.size());
     }
 }
