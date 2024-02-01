@@ -38,4 +38,9 @@ public class Carro {
         this.capacidadeTanque = capacidadeTanque;
     }
 
+    void calcularAbastecimento(double valorGasolina){
+        double valorTotal = valorGasolina * capacidadeTanque;
+        System.out.println("O valor total para encher o tanque é de R$" + valorTotal);
+    }
+
 }
