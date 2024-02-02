@@ -14,7 +14,7 @@ public class RodarAplicacao {
         funcionario.processar();
 
         System.out.println("\nVendedor");
-        vendedor.processar();
+        vendedor.processar(); // usou o conceito de polimorfismo, pois a mesma ação `processar()` se comportou de maneiras diferentes
 
         System.out.println("\nFaxineiro");
         faxineiro.processar(); // o faxineiro não tem o método na `processar()` na sua classe
