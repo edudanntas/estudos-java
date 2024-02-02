@@ -1,5 +1,7 @@
 package edu.eduardo.segundasemana.poo;
 
+import edu.eduardo.segundasemana.poo.heranca.Moto;
+
 public class Main {
     public static void main(String[] args) {
         Carro carro1 = new Carro();
@@ -16,5 +18,6 @@ public class Main {
         System.out.println(carro2.getModelo());
 
         carro2.calcularAbastecimento(4.87);
+
     }
 }
