@@ -17,8 +17,7 @@ public class Calculadora implements OperacaoMatematica {
         return valor1 / valor2;
     }
 
-    @Override
-    public double raizQuadrada(double valor1) {
-        return 0;
+    public double raizQuadrada(double valor){
+        return Math.sqrt(valor);
     }
 }

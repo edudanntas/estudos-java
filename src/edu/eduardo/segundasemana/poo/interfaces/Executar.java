@@ -8,5 +8,7 @@ public class Executar {
         System.out.println(calculadora.subtrair(10,8));
         System.out.println(calculadora.multiplicar(7,42));
         System.out.println(calculadora.dividir(567,8));
+
+        System.out.println(calculadora.raizQuadrada(16));
     }
 }
