@@ -1,4 +1,4 @@
-package edu.eduardo.segundasemana.poo;
+package edu.eduardo.segundasemana.poo.fundamento;
 
 
 import edu.eduardo.segundasemana.poo.heranca.Moto;

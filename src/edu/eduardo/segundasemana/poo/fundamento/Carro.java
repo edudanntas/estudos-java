@@ -1,4 +1,4 @@
-package edu.eduardo.segundasemana.poo;
+package edu.eduardo.segundasemana.poo.fundamento;
 
 public class Carro {
     String cor;
