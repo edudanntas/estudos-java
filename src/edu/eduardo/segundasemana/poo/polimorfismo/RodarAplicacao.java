@@ -13,10 +13,13 @@ public class RodarAplicacao {
         System.out.println("Funcionario");
         funcionario.processar();
 
-        System.out.println("Vendedor");
+        System.out.println("\nVendedor");
         vendedor.processar();
 
-        System.out.println("Faxineiro");
-        faxineiro.processar();
+        System.out.println("\nFaxineiro");
+        faxineiro.processar(); // o faxineiro não tem o método na `processar()` na sua classe
+
+        System.out.println("\nGerente");
+        gerente.processar();
     }
 }
