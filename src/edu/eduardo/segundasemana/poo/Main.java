@@ -1,6 +1,8 @@
 package edu.eduardo.segundasemana.poo;
 
+
 import edu.eduardo.segundasemana.poo.heranca.Moto;
+import edu.eduardo.segundasemana.poo.heranca.Veiculo;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +20,17 @@ public class Main {
         System.out.println(carro2.getModelo());
 
         carro2.calcularAbastecimento(4.87);
+
+        /*
+          Upcast -> Transformando uma subclasse em uma superclasse, subindo na hierarquia de classes
+         */
+        Veiculo moto = new Moto();
+
+        /*
+          Downcast -> Transformando uma Superclasse em uma Subclasse, descendo na hierarquia de classes
+          é suber aconselhavel a nao se usar o downcast pois geralmente apresenta muito erro.
+         */
+        Moto veiculo = (Moto) new Veiculo();
 
     }
 }
