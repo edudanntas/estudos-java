@@ -48,13 +48,22 @@ public class Banco {
                         System.out.printf("Digite o valor que deseja depositar: R$");
                         double valor = scan.nextDouble();
                         contaDeposito.deposito(valor);
-                        System.out.printf("Deposito de R$%.2f realizado com sucesso!", valor);
+                        System.out.printf("Deposito de R$%.2f realizado com sucesso! Seu saldo atual é de R$%.2f", valor, contaDeposito.getSaldo());
                     }else{
                         System.out.println("Conta não encontrada. Verifique o número da conta.");
                     }
                     break;
                 case 3:
-                    System.out.println("saque");
+                    System.out.println("Opção 3 selecionada: Saque");
+                    System.out.println("Digite o numero da conta");
+                    String numeroContaSaque = scan.next();
+                    ContaCorrente contaSaque = contas.get(numeroContaSaque);
+                    if(contaSaque != null){
+                        System.out.printf("Digite o valor para sacar: R$");
+                        double valor = scan.nextDouble();
+                        contaSaque.saque(valor);
+                        System.out.printf("Saque de R$%.2f realizado com sucesso! Seu saldo atual é de R$%.2f", valor, contaSaque.getSaldo());
+                    }
                     break;
                 case 4:
                     System.out.println("Opção 4 selecionada: Mostrar Saldo");

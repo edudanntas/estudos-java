@@ -26,7 +26,7 @@ public class ContaCorrente extends Conta {
     @Override
     public void saque(double valor) {
         double saldo = getSaldo();
-        if (valor < saldo && valor > 0) {
+        if ((valor < saldo) && (valor > 0)) {
             double novoSaldo = saldo - valor;
             setSaldo(novoSaldo);
             return;
