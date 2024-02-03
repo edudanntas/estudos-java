@@ -32,7 +32,7 @@ experiências e aprendizados ao longo do curso.
 ## Próximos Passos
 
 ### **Programação Orientada a Objetos com Java**
-- [ ] **Programação Orientada a Objetos com Java**
+- [x] **Programação Orientada a Objetos com Java**
 
 - [ ] **Trabalhando com Collections Java**
 
